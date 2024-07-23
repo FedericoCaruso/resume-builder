@@ -1,4 +1,8 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, ThemeConfig } from "@chakra-ui/react";
 
-// Or export `extendBaseTheme` if you only want the default Chakra theme tokens to extend (no default component themes)
-export const customTheme = extendTheme({})
+const config: ThemeConfig = {
+    initialColorMode: 'system',
+    useSystemColorMode: true,
+}
+
+export const customTheme = extendTheme({config})
